@@ -9,7 +9,7 @@
 def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_title
   "SELECT projects.name
 FROM projects
-LEFT JOIN cats_owners
+LEFT JOIN pledges
 ON owners.id = cats_owners.owner_id
 JOIN cats ON cats_owners.cat_id = cats.id
 GROUP BY owners.name;"
